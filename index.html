@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adriansyah Amir - Web Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Optional: Animate on Scroll -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+
+   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1><i class="fas fa-code"></i> Adriansyah Amir</h1>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#portfolio">Portofolio</a>
+      <a href="#contact">Kontak</a>
+      <button id="toggle-theme" title="Toggle Mode"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <img src="assets/images/profile.jpg" alt="Adriansyah Amir" />
+    <h3>Halo, saya <span class="typed"></span></h3>
+    <p>Web Developer | Database designer | Backend Developer</p>
+    <a href="#contact" class="btn">Hubungi Saya</a>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about">
+    <h3><i class="fas fa-user"></i> Tentang Saya</h3>
+    <p>
+      Saya Adriansyah Amir, seorang web developer yang berdedikasi dalam membangun website yang fungsional dan user-friendly.
+      Saya memiliki pengalaman dalam pengembangan frontend dan backend menggunakan HTML, CSS, JavaScript, dan PHP.
+    </p>
+
+    <div class="skills">
+      <div class="skill-bar">
+        <div class="label">
+            <i class="devicon-html5-plain colored"></i>
+           HTML</div>
+        <div class="bar"><div style="width: 70%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <div class="label">
+            <i class="devicon-css3-plain colored"></i>
+           CSS</div>
+        <div class="bar"><div style="width: 70%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <div class="label">
+            <i class="devicon-javascript-plain colored"></i>
+          JavaScript</div>
+        <div class="bar"><div style="width: 40%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <div class="label">
+            <i class="devicon-php-plain colored"></i>
+           PHP</div>
+        <div class="bar"><div style="width: 80%"></div></div>
+      </div>
+    </div>
+  </section>
+
+<section id="portfolio">
+  <h3><i class="fas fa-laptop-code"></i> Portofolio</h3>
+  <div class="portfolio-grid">
+    <div class="card">
+      <img src="assets/images/profile.jpg" alt="Website Pengaduan Kampus" class="portfolio-img" />
+      <h4><i class="fas fa-university"></i> Website Pengaduan Kampus</h4>
+      <p>Sistem pengaduan berbasis PHP untuk mempermudah mahasiswa dalam menyampaikan keluhan kepada pihak kampus.</p>
+    </div>
+    <div class="card">
+      <img src="assets/images/profile.jpg" alt="POS Cuci Mobil" class="portfolio-img" />
+      <h4><i class="fas fa-car"></i> POS Cuci Mobil</h4>
+      <p>Aplikasi Point of Sales sederhana untuk pencatatan pelanggan, omset harian, dan gaji carwasher.</p>
+    </div>
+    <div class="card">
+      <img src="assets/images/profile.jpg" alt="Marketplace Pizza" class="portfolio-img" />
+      <h4><i class="fas fa-pizza-slice"></i> Marketplace Pizza</h4>
+      <p>Website pemesanan pizza dengan fitur login, keranjang belanja, dan sistem pembayaran sederhana.</p>
+    </div>
+  </div>
+  <a href="sections/portfolio.html" class="btn">Lihat selengkapnya...</a>
+</section>
+
+  <!-- Kontak -->
+  <section id="contact">
+    <h3><i class="fas fa-envelope"></i> Kontak</h3>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Nama Lengkap" required />
+      <input type="email" name="email" placeholder="Email Aktif" required />
+      <textarea name="message" rows="5" placeholder="Pesan Anda..." required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Adriansyah Amir. Dibuat dengan ❤</p>
+    <p>
+      <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </p>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
