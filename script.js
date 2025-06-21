@@ -1,22 +1,36 @@
-// Dark Mode Toggle
-document.getElementById("toggle-theme").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+// ===== Dark Mode Persistence =====
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("mode") === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  const toggle = document.getElementById("toggle-theme");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem(
+        "mode",
+        document.body.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+  }
 });
 
-// Typing Effect
+// ===== Typing Effect (optional) =====
 const text = ["Adriansyah Amir", "Web Developer", "Backend Developer"];
-let i = 0, j = 0;
+let i = 0,
+  j = 0;
 let isDeleting = false;
 let delayAfterTyping = false;
 const typed = document.querySelector(".typed");
 
 function type() {
-  // Update current text
+  if (!typed) return;
+
   let currentText = text[i];
 
   if (!delayAfterTyping) {
     if (!isDeleting) {
-      // Mengetik satu per satu
       j++;
       typed.textContent = currentText.substring(0, j);
       if (j === currentText.length) {
@@ -24,12 +38,11 @@ function type() {
         setTimeout(() => {
           delayAfterTyping = false;
           isDeleting = true;
-          type(); // lanjut ke delete
-        }, 1500); // jeda setelah selesai mengetik
+          type();
+        }, 1500);
         return;
       }
     } else {
-      // Menghapus satu per satu
       j--;
       typed.textContent = currentText.substring(0, j);
       if (j === 0) {
